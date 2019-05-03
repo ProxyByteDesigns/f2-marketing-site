@@ -21,8 +21,8 @@ h1 {
   border: 0.4rem solid #fff;
   border-radius: 2rem;
   text-transform: uppercase;
-  animation: flicker 1.5s infinite alternate;
   background-color: black;
+
   box-shadow:
           0 0 .5rem #fff,
           inset 0 0 .5rem #fff,
@@ -31,10 +31,33 @@ h1 {
           0 0 4rem $color-neon-green-border,
           inset 0 0 4rem $color-neon-green-border;
 
+  .flicker {
+    animation: flicker 1.5s infinite alternate;
+    color: $color-neon-pink;
+  }
+
   span {
     font-size: 6rem;
-    color: $color-neon-green;
-    text-shadow: none;
+
+    &.green {
+      color: $color-neon-green;
+      text-shadow: 0 0 .5rem #fff,
+      inset 0 0 .5rem #fff,
+      0 0 2rem $color-neon-green-border,
+      inset 0 0 2rem $color-neon-green-border,
+      0 0 4rem $color-neon-green-border,
+      inset 0 0 4rem $color-neon-green-border;
+    }
+
+    &.pink {
+      color: $color-neon-pink;
+      text-shadow: 0 0 .5rem #fff,
+      0 0 2rem $color-neon-pink,
+      0 0 4rem $color-neon-pink,
+      0 0 6rem $color-neon-pink,
+      0 0 8rem $color-neon-pink,
+      0 0 10rem $color-neon-pink;
+    }
   }
 
   @include media-breakpoint-down(md) {

@@ -1,0 +1,14 @@
+@import 'styles/app_variables';
+
+.ChatBot {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 250px;
+
+  .card-body {
+    max-height: 350px;
+    overflow-wrap: break-spaces;
+    overflow-y: scroll;
+  }
+}

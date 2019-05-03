@@ -6,7 +6,7 @@ import routes from './routes';
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import './App.css';
-import Header from './components/Header';
+import ChatBot from './components/ChatBot';
 
 const options = {
   position: 'top right',
@@ -29,6 +29,7 @@ function App() {
             </Container>
           </AlertProvider>
         </Col>
+        <ChatBot />
       </Row>
     </div>
   );

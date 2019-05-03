@@ -9382,15 +9382,26 @@ h1 {
   border: 0.4rem solid #fff;
   border-radius: 2rem;
   text-transform: uppercase;
-  animation: flicker 1.5s infinite alternate;
   background-color: black;
   box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #99fe01,
     inset 0 0 2rem #99fe01, 0 0 4rem #99fe01, inset 0 0 4rem #99fe01;
 }
+h1 .flicker {
+  animation: flicker 1.5s infinite alternate;
+  color: #fe019a;
+}
 h1 span {
   font-size: 6rem;
+}
+h1 span.green {
   color: #39ff14;
-  text-shadow: none;
+  text-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #99fe01,
+    inset 0 0 2rem #99fe01, 0 0 4rem #99fe01, inset 0 0 4rem #99fe01;
+}
+h1 span.pink {
+  color: #fe019a;
+  text-shadow: 0 0 0.5rem #fff, 0 0 2rem #fe019a, 0 0 4rem #fe019a,
+    0 0 6rem #fe019a, 0 0 8rem #fe019a, 0 0 10rem #fe019a;
 }
 @media (max-width: 991.98px) {
   h1 {

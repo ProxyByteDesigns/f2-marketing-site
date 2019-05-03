@@ -7,9 +7,11 @@ class Index extends Component {
       <div className="Index">
         <div className="hero">
           <h1 className="pink">
-            Fur Squared
+            <span className="pink">Fur Squared</span>
             <br />
-            <span>Dates Soon!</span>
+            <span className="flicker">Cyber Skunk</span>
+            <br />
+            <span className="green">Dates Soon!</span>
           </h1>
         </div>
       </div>
