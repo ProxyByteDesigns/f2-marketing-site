@@ -6,6 +6,7 @@ import routes from './routes';
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import './App.css';
+import Header from './components/Header';
 
 const options = {
   position: 'top right',
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Helmet titleTemplate="%s | Fur Squared">
-        <title>App</title>
+        <title>Home</title>
       </Helmet>
       <Row className="no-gutters">
         <Col xs={12} sm={{ size: 10, offset: 1 }} md={{ size: 8, offset: 2 }}>
