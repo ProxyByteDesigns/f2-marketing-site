@@ -68,11 +68,26 @@ class ChatBot extends Component {
           }
         );
       } else {
-        this.setState({
-          disconnect: true
-        });
+        this.setState(
+          {
+            disconnect: true
+          },
+          () => {
+            this.timeout = setTimeout(() => {
+              this.setState({
+                show: false
+              });
+            }, 6000);
+          }
+        );
       }
     }, 2100);
+  };
+
+  closeChat = () => {
+    this.setState({
+      show: false
+    });
   };
 
   onMessage = event => {
