@@ -8,6 +8,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import './App.css';
 import ChatBot from './components/ChatBot';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const options = {
   position: 'top right',
@@ -31,6 +32,7 @@ function App() {
             </Container>
           </AlertProvider>
         </Col>
+        <Footer />
         <ChatBot />
       </Row>
     </div>

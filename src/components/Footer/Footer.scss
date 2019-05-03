@@ -1,0 +1,33 @@
+@import 'styles/app_variables';
+@import 'styles/base/bootstrap_custom';
+
+.Footer {
+  width: 100%;
+  height: $nav-height;
+  bottom: 0;
+  background-color: $color-black;
+  color: #ddd;
+
+  .social {
+    a {
+      padding-right: 1rem;
+    }
+
+    .fa-twitter {
+      color: $color-neon-pink;
+    }
+    .fa-facebook-f {
+      color: $color-neon-pink;
+    }
+  }
+
+  .legal {
+    color: $color-neon-pink;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
