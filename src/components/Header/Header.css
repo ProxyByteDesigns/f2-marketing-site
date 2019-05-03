@@ -9374,7 +9374,7 @@ a.text-dark:focus {
   z-index: 500;
   text-align: center;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .Header .navbar-collapse {
     background-color: #000000;
     border-radius: 0.5rem;
@@ -9390,5 +9390,6 @@ a.text-dark:focus {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(153,254,1, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .Header a.nav-link:hover {
+  background-color: #000000;
   color: #fe019a;
 }

@@ -24,16 +24,30 @@ h1 {
   background-color: black;
 
   box-shadow:
-          0 0 .5rem #fff,
-          inset 0 0 .5rem #fff,
-          0 0 2rem $color-neon-green-border,
-          inset 0 0 2rem $color-neon-green-border,
-          0 0 4rem $color-neon-green-border,
-          inset 0 0 4rem $color-neon-green-border;
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem $color-neon-green-border,
+    inset 0 0 2rem $color-neon-green-border,
+    0 0 4rem $color-neon-green-border,
+    inset 0 0 4rem $color-neon-green-border;
 
   .flicker {
+    font-family: 'cyberthroneregular';
+    font-size: 8rem;
     animation: flicker 1.5s infinite alternate;
     color: $color-neon-pink;
+
+    @include media-breakpoint-down(md) {
+      font-size: 6rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 4rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 2.5rem;
+    }
   }
 
   span {
@@ -133,4 +147,12 @@ a {
   url('./fonts/fty_delirium_neon_ncv-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'cyberthroneregular';
+  src: url('./fonts/cyberthrone-webfont.woff2') format('woff2'),
+  url('./fonts/cyberthrone-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }

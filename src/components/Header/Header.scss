@@ -5,7 +5,6 @@
   font-family: 'delirium_neon_ncvregular';
 
   height: $nav-height;
-  //background-color: $color-black;
 
   .navbar {
     height: 100%;
@@ -13,16 +12,17 @@
   .navbar-collapse {
     z-index: 500;
     text-align: center;
-    @include media-breakpoint-down(md) {
+
+    @include media-breakpoint-down(sm) {
       background-color: $color-black;
       border-radius: 0.5rem;
       box-shadow:
-              0 0 .5rem #fff,
-              inset 0 0 .5rem #fff,
-              0 0 2rem $color-neon-green-border,
-              inset 0 0 2rem $color-neon-green-border,
-              0 0 4rem $color-neon-green-border,
-              inset 0 0 4rem $color-neon-green-border;
+        0 0 .5rem #fff,
+        inset 0 0 .5rem #fff,
+        0 0 2rem $color-neon-green-border,
+        inset 0 0 2rem $color-neon-green-border,
+        0 0 4rem $color-neon-green-border,
+        inset 0 0 4rem $color-neon-green-border;
     }
   }
 
@@ -37,6 +37,7 @@
   a {
     &.nav-link {
       &:hover {
+        background-color: $color-black;
         color: $color-neon-pink;
       }
     }
