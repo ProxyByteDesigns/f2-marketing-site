@@ -9365,6 +9365,7 @@ a.text-dark:focus {
 
 .Header {
   font-family: 'delirium_neon_ncvregular';
+  background-color: rgba(0, 0, 0, 0.8);
   height: 4.75rem;
 }
 .Header .navbar {
