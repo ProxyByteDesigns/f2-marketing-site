@@ -17,7 +17,7 @@ const options = {
 function App() {
   return (
     <div className="App">
-      <Helmet titleTemplate="%s | App">
+      <Helmet titleTemplate="%s | Fur Squared">
         <title>App</title>
       </Helmet>
       <Row className="no-gutters">
