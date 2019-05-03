@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container, Row, Col } from 'reactstrap';
+import { Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import routes from './routes';
+import { Provider as AlertProvider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
 import './App.css';
+
+const options = {
+  position: 'top right',
+  timeout: 5000,
+  offset: '60px 30px',
+  transition: 'scale'
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet titleTemplate="%s | App">
+        <title>App</title>
+      </Helmet>
+      <Row className="no-gutters">
+        <Col xs={12} sm={{ size: 10, offset: 1 }} md={{ size: 8, offset: 2 }}>
+          <AlertProvider template={AlertTemplate} {...options}>
+            <Container fluid className="app-container">
+              <Switch>{routes}</Switch>
+            </Container>
+          </AlertProvider>
+        </Col>
+      </Row>
     </div>
   );
 }
