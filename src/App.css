@@ -9378,7 +9378,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 8rem;
-  padding: 4rem 6rem;
+  padding: 4rem 4rem;
   border: 0.4rem solid #fff;
   border-radius: 2rem;
   text-transform: uppercase;
@@ -9395,8 +9395,8 @@ h1 span {
 }
 h1 span.green {
   color: #39ff14;
-  text-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #99fe01,
-    inset 0 0 2rem #99fe01, 0 0 4rem #99fe01, inset 0 0 4rem #99fe01;
+  text-shadow: 0 0 0.5rem #fff, 0 0 2rem #99fe01, 0 0 2rem #99fe01,
+    0 0 4rem #99fe01, 0 0 4rem #99fe01;
 }
 h1 span.pink {
   color: #fe019a;
@@ -9443,16 +9443,13 @@ h1.pink {
 }
 
 a.nav-link {
-  font-family: sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  padding: 1rem 4rem !important;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #39ff14;
 }
 
-/* Animate neon flicker */
 @keyframes flicker {
   0%,
   19%,
@@ -9471,4 +9468,12 @@ a.nav-link {
   55% {
     text-shadow: none;
   }
+}
+
+@font-face {
+  font-family: 'delirium_neon_ncvregular';
+  src: url('./fonts/fty_delirium_neon_ncv-webfont.woff2') format('woff2'),
+    url('./fonts/fty_delirium_neon_ncv-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
