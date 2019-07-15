@@ -1,0 +1,122 @@
+@import 'styles/app_variables';
+@import 'styles/base/bootstrap_custom';
+
+.hero {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  .well {
+    width: 100%;
+    padding: 2rem 4rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    background-color: black;
+
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem $color-neon-green-border,
+    inset 0 0 2rem $color-neon-green-border,
+    0 0 4rem $color-neon-green-border,
+    inset 0 0 4rem $color-neon-green-border;
+
+    .flicker {
+      font-family: 'cyberthroneregular';
+      font-size: 8rem;
+      animation: flicker 1.5s infinite alternate;
+      color: $color-neon-pink;
+
+      @include media-breakpoint-down(md) {
+        font-size: 6rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 4rem;
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: 2.5rem;
+      }
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    h1, h2, h3, h4, h5 {
+      text-transform: uppercase;
+      text-align: center;
+
+      &.green {
+        color: $color-neon-green;
+        text-shadow: 0 0 .25rem #fff,
+        0 0 2rem $color-neon-green-border,
+        0 0 2rem $color-neon-green-border,
+        0 0 4rem $color-neon-green-border,
+        0 0 4rem $color-neon-green-border;
+      }
+
+      &.pink {
+        color: $color-neon-pink;
+        text-shadow: 0 0 .35rem #fff,
+        0 0 2rem $color-neon-pink,
+        0 0 4rem $color-neon-pink,
+        0 0 6rem $color-neon-pink,
+        0 0 8rem $color-neon-pink,
+        0 0 10rem $color-neon-pink;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 6rem;
+      span {
+        font-size: 4rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 4rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 2.5rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-moz-selection {
+      background-color: $color-neon-green-border;
+      color: $color-neon-pink;
+    }
+
+    &selection {
+      background-color: $color-neon-green-border;
+      color: $color-neon-pink;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow:
+        -0.2rem -0.2rem 1rem #fff,
+        0.2rem 0.2rem 1rem #fff,
+        0 0 2rem $color-neon-pink,
+        0 0 4rem $color-neon-pink,
+        0 0 6rem $color-neon-pink,
+        0 0 8rem $color-neon-pink,
+        0 0 10rem $color-neon-pink;
+    }
+
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+  }
+}
