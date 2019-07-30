@@ -11,7 +11,7 @@ class Index extends Component {
             <br />
             <span className="flicker">Cyber Skunk</span>
             <br />
-            <span className="green">Dates Soon!</span>
+            <span className="green">Feb 14-16</span>
           </h1>
         </div>
       </div>

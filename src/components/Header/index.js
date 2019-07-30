@@ -34,19 +34,12 @@ class Header extends React.Component {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Charity</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Hotel</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Dealers</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Contact</NavLink>
+                <NavLink
+                  href="https://docs.google.com/document/d/1grETpsbC97O0qn3FTFYghMzGvK3240zmUr-ZNeTPppc/edit"
+                  target="_blank"
+                >
+                  Poster
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
