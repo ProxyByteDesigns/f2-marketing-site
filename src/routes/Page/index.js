@@ -25,4 +25,8 @@ function Page({ data }) {
   );
 }
 
-export default withData(Page, { content_type: 'pages', reduce: true });
+export default withData(
+  Page,
+  { content_type: 'pages', reduce: true },
+  { skipRedirect: true }
+);

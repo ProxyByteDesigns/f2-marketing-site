@@ -3,7 +3,11 @@ import fetch from 'isomorphic-fetch';
 import { buildURLQuery } from '../utils/functions';
 import { Redirect } from 'react-router-dom';
 
-function withData(WrappedComponent, selectData) {
+const defaultOptions = {
+  skipRedirect: false
+};
+
+function withData(WrappedComponent, selectData, options = defaultOptions) {
   return class extends React.Component {
     constructor(props) {
       super(props);
@@ -105,8 +109,9 @@ function withData(WrappedComponent, selectData) {
 
     render() {
       const { notFound } = this.state;
+      const { skipRedirect } = options;
 
-      if (notFound) {
+      if (notFound && !skipRedirect) {
         return <Redirect to="/404" />;
       }
 

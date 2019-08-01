@@ -42,6 +42,7 @@ class Header extends React.Component {
                 data.map((element, key) => {
                   const external = 'http' === element.link_to.substr(0, 4);
 
+                  console.log(element);
                   return (
                     <NavItem key={key}>
                       {external ? (
@@ -50,6 +51,7 @@ class Header extends React.Component {
                             pathname === element.link_to ? 'active' : ''
                           }
                           href={element.link_to}
+                          target={element.openInNewTab ? '_blank' : '_self'}
                         >
                           {element.title}
                         </NavLink>
