@@ -1,0 +1,49 @@
+@import 'styles/app_variables';
+@import 'styles/base/bootstrap_custom';
+
+.Header {
+  font-family: 'delirium_neon_ncvregular';
+  background-color: rgba(0, 0, 0, 0.8);
+
+  height: $nav-height;
+  margin-bottom: 8rem;
+
+  .navbar {
+    height: 100%;
+  }
+  .navbar-collapse {
+    z-index: 500;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      background-color: $color-black;
+      border-radius: 0.5rem;
+      box-shadow:
+              0 0 .5rem #fff,
+              inset 0 0 .5rem #fff,
+              0 0 2rem $color-neon-green-border,
+              inset 0 0 2rem $color-neon-green-border,
+              0 0 4rem $color-neon-green-border,
+              inset 0 0 4rem $color-neon-green-border;
+    }
+  }
+
+  .navbar-toggler {
+    background-color: $color-black;
+    border-color: $color-neon-green-border;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(153,254,1, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  a {
+    &.nav-link {
+      &:hover {
+        color: $color-neon-pink;
+      }
+      &.active {
+        color: $color-neon-pink;
+      }
+    }
+  }
+}
