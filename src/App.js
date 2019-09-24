@@ -53,9 +53,6 @@ function App() {
           sm={{ size: 10, offset: 1 }}
           md={{ size: 8, offset: 2 }}
         >
-          <StyledVideo autoPlay muted loop poster={backgroundImage}>
-            <StyledSource src={backgroundMovie} type="video/mp4" />
-          </StyledVideo>
           <AlertProvider template={AlertTemplate} {...options}>
             <Container fluid className="app-container">
               <Switch>{routes}</Switch>
