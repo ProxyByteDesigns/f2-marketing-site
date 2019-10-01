@@ -12,7 +12,7 @@ function Post({ post }) {
           <h2 className="green">
             {' '}
             by: {post.author.username} at{' '}
-            {moment(post.created_at).format('yyyy-mm-dd')}
+            {moment(post.created_at).format('Y-MM-DD')}
           </h2>
         </div>
         <div
