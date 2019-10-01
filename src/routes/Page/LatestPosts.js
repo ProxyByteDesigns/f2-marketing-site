@@ -5,7 +5,7 @@ export default withData(
   PostList,
   {
     content_type: 'posts',
-    sort_by: 'created:DESC',
+    sort_by: 'created:ASC',
     limit: 5,
     static: true
   },
