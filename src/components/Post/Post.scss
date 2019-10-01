@@ -1,4 +1,8 @@
 
 .post {
   text-align: center;
+
+  .post-body {
+    word-break: break-all;
+  }
 }
