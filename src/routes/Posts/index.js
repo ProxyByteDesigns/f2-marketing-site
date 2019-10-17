@@ -1,10 +1,19 @@
 import React from 'react';
-import withData from 'components/withData';
 import Well from 'components/Well';
 import PostList from 'components/PostList';
 import { Helmet } from 'react-helmet';
+import useData from '../../hooks/useData';
 
-function Post({ data }) {
+function Post() {
+  const [status, error, isLoading, data] = useData(
+    'posts',
+    {
+      reduce: true,
+      skipRedirect: true
+    },
+    true
+  );
+
   return (
     <div className="page">
       <Helmet>
@@ -16,4 +25,4 @@ function Post({ data }) {
   );
 }
 
-export default withData(Post, { content_type: 'posts', static: true });
+export default Post;

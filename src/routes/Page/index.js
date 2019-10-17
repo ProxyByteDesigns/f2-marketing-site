@@ -1,11 +1,32 @@
 import React from 'react';
-import withData from '../../components/withData';
 import { Switch, Route } from 'react-router-dom';
 import Homepage from './Homepage';
 import Well from 'components/Well';
 import { Helmet } from 'react-helmet';
+import useData from '../../hooks/useData';
+import { withRouter } from 'react-router';
 
-function Page({ data }) {
+function Page({
+  match: {
+    params: { permalink }
+  }
+}) {
+  let page = permalink;
+
+  if (page === undefined) {
+    page = 'homepage';
+  }
+
+  const [status, error, isLoading, data] = useData(
+    'pages',
+    {
+      reduce: true,
+      skipRedirect: true
+    },
+    false,
+    page
+  );
+
   if (!data || !data.body) {
     return <React.Fragment />;
   }
@@ -25,8 +46,4 @@ function Page({ data }) {
   );
 }
 
-export default withData(
-  Page,
-  { content_type: 'pages', reduce: true },
-  { skipRedirect: true }
-);
+export default withRouter(Page);

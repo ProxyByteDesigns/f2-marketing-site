@@ -1,15 +1,19 @@
-import withData from 'components/withData';
+import React from 'react';
 import PostList from 'components/PostList';
+import useData from '../../hooks/useData';
 
-export default withData(
-  PostList,
-  {
-    content_type: 'posts',
-    sort: 'created:DESC',
-    limit: 5,
-    static: true
-  },
-  {
-    skipRedirect: true
-  }
-);
+const LatestPosts = () => {
+  const [status, error, isLoading, data] = useData(
+    'posts',
+    {
+      sort: 'created:DESC',
+      limit: 5,
+      skipRedirect: true
+    },
+    true
+  );
+
+  return <PostList data={data} />;
+};
+
+export default LatestPosts;
