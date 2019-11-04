@@ -9,28 +9,11 @@ import './App.css';
 import ChatBot from './components/ChatBot';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import backgroundMovie from 'assets/background.mp4';
 import backgroundImage from 'assets/background.jpg';
 import styled from 'styled-components';
 
-const StyledVideo = styled.video`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-  background-size: contain;
-`;
-
-const StyledSource = styled.source`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
+const Content = styled.div`
+  background-image: url(${backgroundImage});
 `;
 
 const options = {
@@ -42,7 +25,7 @@ const options = {
 
 function App() {
   return (
-    <div className="App">
+    <Content className="App">
       <Helmet titleTemplate="%s | Fur Squared">
         <title>Home</title>
       </Helmet>
@@ -53,7 +36,6 @@ function App() {
           sm={{ size: 10, offset: 1 }}
           md={{ size: 8, offset: 2 }}
         >
-          <StyledVideo autoPlay muted loop poster={backgroundImage} />
           <AlertProvider template={AlertTemplate} {...options}>
             <Container fluid className="app-container">
               <Switch>{routes}</Switch>
@@ -63,7 +45,7 @@ function App() {
         <Footer />
         <ChatBot />
       </Row>
-    </div>
+    </Content>
   );
 }
 
